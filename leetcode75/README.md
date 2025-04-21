@@ -101,7 +101,7 @@ This repository tracks my progress through the [LeetCode 75](https://leetcode.co
 - [x] [Kth Largest Element in an Array](https://leetcode.com/problems/kth-largest-element-in-an-array/)
 - [ ] [Smallest Number in Infinite Set](https://leetcode.com/problems/smallest-number-in-infinite-set/)
 - [x] [Maximum Subsequence Score](https://leetcode.com/problems/maximum-subsequence-score/)
-- [ ] [Total Cost to Hire K Workers](https://leetcode.com/problems/total-cost-to-hire-k-workers/)
+- [x] [Total Cost to Hire K Workers](https://leetcode.com/problems/total-cost-to-hire-k-workers/)
 
 ## Binary Search
 

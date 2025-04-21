@@ -1,4 +1,3 @@
-
 # LeetCode 75 Study Plan Progress Tracker
 
 This repository tracks my progress through the [LeetCode 75](https://leetcode.com/studyplan/leetcode-75/)
@@ -103,3 +102,50 @@ This repository tracks my progress through the [LeetCode 75](https://leetcode.co
 - [ ] [Smallest Number in Infinite Set](https://leetcode.com/problems/smallest-number-in-infinite-set/)
 - [x] [Maximum Subsequence Score](https://leetcode.com/problems/maximum-subsequence-score/)
 - [ ] [Total Cost to Hire K Workers](https://leetcode.com/problems/total-cost-to-hire-k-workers/)
+
+## Binary Search
+
+- [x] [Guess Number Higher or Lower](https://leetcode.com/problems/guess-number-higher-or-lower/) 
+- [x] [Successful Pairs of Spells and Potions](https://leetcode.com/problems/successful-pairs-of-spells-and-potions/)
+- [x] [Find Peak Element](https://leetcode.com/problems/find-peak-element/)
+- [x] [Koko Eating Bananas](https://leetcode.com/problems/koko-eating-bananas/)
+
+## Backtracking
+
+- [ ] [Letter Combinations of a Phone Number](https://leetcode.com/problems/letter-combinations-of-a-phone-number/)
+- [ ] [Combination Sum III](https://leetcode.com/problems/combination-sum-iii/)
+
+## DP - 1D
+
+- [x] [N-th Tribonacci Number](https://leetcode.com/problems/n-th-tribonacci-number/)
+- [x] [Min Cost Climbing Stairs](https://leetcode.com/problems/min-cost-climbing-stairs/)
+- [x] [House Robber](https://leetcode.com/problems/house-robber/)
+- [ ] [Domino and Tromino Tiling](https://leetcode.com/problems/domino-and-tromino-tiling/)
+
+## DP - Multidimensional
+
+- [ ] [Unique Paths](https://leetcode.com/problems/unique-paths/)
+- [ ] [Longest Common Subsequence](https://leetcode.com/problems/longest-common-subsequence/)
+- [ ] [Best Time to Buy and Sell Stock with Transaction Fee](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-with-transaction-fee/)
+- [ ] [Edit Distance](https://leetcode.com/problems/edit-distance/)
+
+## Bit Manipulation
+
+- [x] [Counting Bits](https://leetcode.com/problems/counting-bits/)
+- [x] [Single Number](https://leetcode.com/problems/single-number/)
+- [ ] [Minimum Flips to Make a OR b Equal to c](https://leetcode.com/problems/minimum-flips-to-make-a-or-b-equal-to-c/)
+
+## Trie
+
+- [ ] [Implement Trie (Prefix Tree)](https://leetcode.com/problems/implement-trie-prefix-tree/)
+- [ ] [Search Suggestions System](https://leetcode.com/problems/search-suggestions-system/)
+
+## Intervals
+
+- [x] [Non-overlapping Intervals](https://leetcode.com/problems/non-overlapping-intervals/)
+- [x] [Minimum Number of Arrows to Burst Balloons](https://leetcode.com/problems/minimum-number-of-arrows-to-burst-balloons/)
+
+## Monotonic Stack
+
+- [ ] [Daily Temperatures](https://leetcode.com/problems/daily-temperatures/)
+- [ ] [Online Stock Span](https://leetcode.com/problems/online-stock-span/)

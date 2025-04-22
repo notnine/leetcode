@@ -112,7 +112,7 @@ This repository tracks my progress through the [LeetCode 75](https://leetcode.co
 
 ## Backtracking
 
-- [ ] [Letter Combinations of a Phone Number](https://leetcode.com/problems/letter-combinations-of-a-phone-number/)
+- [x] [Letter Combinations of a Phone Number](https://leetcode.com/problems/letter-combinations-of-a-phone-number/)
 - [ ] [Combination Sum III](https://leetcode.com/problems/combination-sum-iii/)
 
 ## DP - 1D

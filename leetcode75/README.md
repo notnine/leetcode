@@ -125,7 +125,7 @@ This repository tracks my progress through the [LeetCode 75](https://leetcode.co
 ## DP - Multidimensional
 
 - [x] [Unique Paths](https://leetcode.com/problems/unique-paths/)
-- [ ] [Longest Common Subsequence](https://leetcode.com/problems/longest-common-subsequence/)
+- [x] [Longest Common Subsequence](https://leetcode.com/problems/longest-common-subsequence/)
 - [ ] [Best Time to Buy and Sell Stock with Transaction Fee](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-with-transaction-fee/)
 - [ ] [Edit Distance](https://leetcode.com/problems/edit-distance/)
 

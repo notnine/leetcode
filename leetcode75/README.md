@@ -137,7 +137,7 @@ This repository tracks my progress through the [LeetCode 75](https://leetcode.co
 
 ## Trie
 
-- [ ] [Implement Trie (Prefix Tree)](https://leetcode.com/problems/implement-trie-prefix-tree/)
+- [x] [Implement Trie (Prefix Tree)](https://leetcode.com/problems/implement-trie-prefix-tree/)
 - [ ] [Search Suggestions System](https://leetcode.com/problems/search-suggestions-system/)
 
 ## Intervals

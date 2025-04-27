@@ -56,7 +56,7 @@ This repository tracks my progress through the [LeetCode 75](https://leetcode.co
 ## Queue
 
 - [x] [Number of Recent Calls](https://leetcode.com/problems/number-of-recent-calls/)
-- [ ] [Dota2 Senate](https://leetcode.com/problems/dota2-senate/)
+- [x] [Dota2 Senate](https://leetcode.com/problems/dota2-senate/)
 
 ## Linked List
 
@@ -99,7 +99,7 @@ This repository tracks my progress through the [LeetCode 75](https://leetcode.co
 ## Heap / Priority Queue
 
 - [x] [Kth Largest Element in an Array](https://leetcode.com/problems/kth-largest-element-in-an-array/)
-- [ ] [Smallest Number in Infinite Set](https://leetcode.com/problems/smallest-number-in-infinite-set/)
+- [x] [Smallest Number in Infinite Set](https://leetcode.com/problems/smallest-number-in-infinite-set/)
 - [x] [Maximum Subsequence Score](https://leetcode.com/problems/maximum-subsequence-score/)
 - [x] [Total Cost to Hire K Workers](https://leetcode.com/problems/total-cost-to-hire-k-workers/)
 
@@ -120,11 +120,11 @@ This repository tracks my progress through the [LeetCode 75](https://leetcode.co
 - [x] [N-th Tribonacci Number](https://leetcode.com/problems/n-th-tribonacci-number/)
 - [x] [Min Cost Climbing Stairs](https://leetcode.com/problems/min-cost-climbing-stairs/)
 - [x] [House Robber](https://leetcode.com/problems/house-robber/)
-- [ ] [Domino and Tromino Tiling](https://leetcode.com/problems/domino-and-tromino-tiling/)
+- [x] [Domino and Tromino Tiling](https://leetcode.com/problems/domino-and-tromino-tiling/)
 
 ## DP - Multidimensional
 
-- [ ] [Unique Paths](https://leetcode.com/problems/unique-paths/)
+- [x] [Unique Paths](https://leetcode.com/problems/unique-paths/)
 - [ ] [Longest Common Subsequence](https://leetcode.com/problems/longest-common-subsequence/)
 - [ ] [Best Time to Buy and Sell Stock with Transaction Fee](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-with-transaction-fee/)
 - [ ] [Edit Distance](https://leetcode.com/problems/edit-distance/)
@@ -133,7 +133,7 @@ This repository tracks my progress through the [LeetCode 75](https://leetcode.co
 
 - [x] [Counting Bits](https://leetcode.com/problems/counting-bits/)
 - [x] [Single Number](https://leetcode.com/problems/single-number/)
-- [ ] [Minimum Flips to Make a OR b Equal to c](https://leetcode.com/problems/minimum-flips-to-make-a-or-b-equal-to-c/)
+- [x] [Minimum Flips to Make a OR b Equal to c](https://leetcode.com/problems/minimum-flips-to-make-a-or-b-equal-to-c/)
 
 ## Trie
 
@@ -148,4 +148,4 @@ This repository tracks my progress through the [LeetCode 75](https://leetcode.co
 ## Monotonic Stack
 
 - [x] [Daily Temperatures](https://leetcode.com/problems/daily-temperatures/)
-- [ ] [Online Stock Span](https://leetcode.com/problems/online-stock-span/)
+- [x] [Online Stock Span](https://leetcode.com/problems/online-stock-span/)

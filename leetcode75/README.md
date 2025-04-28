@@ -89,7 +89,7 @@ This repository tracks my progress through the [LeetCode 75](https://leetcode.co
 - [x] [Keys and Rooms](https://leetcode.com/problems/keys-and-rooms/)
 - [x] [Number of Provinces](https://leetcode.com/problems/number-of-provinces/)
 - [x] [Reorder Routes to Make All Paths Lead to the City Zero](https://leetcode.com/problems/reorder-routes-to-make-all-paths-lead-to-the-city-zero/)
-- [ ] [Evaluate Division](https://leetcode.com/problems/evaluate-division/)
+- [x] [Evaluate Division](https://leetcode.com/problems/evaluate-division/)
 
 ## Graphs - BFS
 
@@ -126,8 +126,8 @@ This repository tracks my progress through the [LeetCode 75](https://leetcode.co
 
 - [x] [Unique Paths](https://leetcode.com/problems/unique-paths/)
 - [x] [Longest Common Subsequence](https://leetcode.com/problems/longest-common-subsequence/)
-- [ ] [Best Time to Buy and Sell Stock with Transaction Fee](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-with-transaction-fee/)
-- [ ] [Edit Distance](https://leetcode.com/problems/edit-distance/)
+- [x] [Best Time to Buy and Sell Stock with Transaction Fee](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-with-transaction-fee/)
+- [x] [Edit Distance](https://leetcode.com/problems/edit-distance/)
 
 ## Bit Manipulation
 
@@ -138,7 +138,7 @@ This repository tracks my progress through the [LeetCode 75](https://leetcode.co
 ## Trie
 
 - [x] [Implement Trie (Prefix Tree)](https://leetcode.com/problems/implement-trie-prefix-tree/)
-- [ ] [Search Suggestions System](https://leetcode.com/problems/search-suggestions-system/)
+- [x] [Search Suggestions System](https://leetcode.com/problems/search-suggestions-system/)
 
 ## Intervals
 

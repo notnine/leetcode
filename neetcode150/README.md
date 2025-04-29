@@ -62,7 +62,7 @@ This tracker follows the [NeetCode 150](https://neetcode.io/practice?tab=neetcod
 ## Linked List
 
 - [ ] [Reverse Linked List](https://leetcode.com/problems/reverse-linked-list/)
-- [ ] [Merge Two Sorted Lists](https://leetcode.com/problems/merge-two-sorted-lists/)
+- [x] [Merge Two Sorted Lists](https://leetcode.com/problems/merge-two-sorted-lists/)
 - [ ] [Reorder List](https://leetcode.com/problems/reorder-list/)
 - [ ] [Remove Nth Node From End of List](https://leetcode.com/problems/remove-nth-node-from-end-of-list/)
 - [ ] [Copy List with Random Pointer](https://leetcode.com/problems/copy-list-with-random-pointer/)
@@ -78,7 +78,7 @@ This tracker follows the [NeetCode 150](https://neetcode.io/practice?tab=neetcod
 - [x] [Invert Binary Tree](https://leetcode.com/problems/invert-binary-tree/)
 - [ ] [Maximum Depth of Binary Tree](https://leetcode.com/problems/maximum-depth-of-binary-tree/)
 - [x] [Diameter of Binary Tree](https://leetcode.com/problems/diameter-of-binary-tree/)
-- [ ] [Balanced Binary Tree](https://leetcode.com/problems/balanced-binary-tree/)
+- [x] [Balanced Binary Tree](https://leetcode.com/problems/balanced-binary-tree/)
 - [ ] [Same Tree](https://leetcode.com/problems/same-tree/)
 - [ ] [Subtree of Another Tree](https://leetcode.com/problems/subtree-of-another-tree/)
 - [ ] [Lowest Common Ancestor of a BST](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/)

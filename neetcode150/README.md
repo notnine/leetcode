@@ -16,7 +16,7 @@ This tracker follows the [NeetCode 150](https://neetcode.io/practice?tab=neetcod
 - [x] [Valid Anagram](https://leetcode.com/problems/valid-anagram/)
 - [x] [Two Sum](https://leetcode.com/problems/two-sum/)
 - [ ] [Group Anagrams](https://leetcode.com/problems/group-anagrams/)
-- [ ] [Top K Frequent Elements](https://leetcode.com/problems/top-k-frequent-elements/)
+- [x] [Top K Frequent Elements](https://leetcode.com/problems/top-k-frequent-elements/)
 - [ ] [Product of Array Except Self](https://leetcode.com/problems/product-of-array-except-self/)
 - [ ] [Valid Sudoku](https://leetcode.com/problems/valid-sudoku/)
 - [ ] [Encode and Decode Strings](https://leetcode.com/problems/encode-and-decode-strings/)
@@ -42,7 +42,7 @@ This tracker follows the [NeetCode 150](https://neetcode.io/practice?tab=neetcod
 ## Stack
 
 - [x] [Valid Parentheses](https://leetcode.com/problems/valid-parentheses/)
-- [ ] [Min Stack](https://leetcode.com/problems/min-stack/)
+- [x] [Min Stack](https://leetcode.com/problems/min-stack/)
 - [ ] [Evaluate Reverse Polish Notation](https://leetcode.com/problems/evaluate-reverse-polish-notation/)
 - [ ] [Generate Parentheses](https://leetcode.com/problems/generate-parentheses/)
 - [ ] [Daily Temperatures](https://leetcode.com/problems/daily-temperatures/)
@@ -51,9 +51,9 @@ This tracker follows the [NeetCode 150](https://neetcode.io/practice?tab=neetcod
 
 ## Binary Search
 
-- [ ] [Binary Search](https://leetcode.com/problems/binary-search/)
-- [ ] [Search a 2D Matrix](https://leetcode.com/problems/search-a-2d-matrix/)
-- [ ] [Koko Eating Bananas](https://leetcode.com/problems/koko-eating-bananas/)
+- [x] [Binary Search](https://leetcode.com/problems/binary-search/)
+- [x] [Search a 2D Matrix](https://leetcode.com/problems/search-a-2d-matrix/)
+- [x] [Koko Eating Bananas](https://leetcode.com/problems/koko-eating-bananas/)
 - [ ] [Search in Rotated Sorted Array](https://leetcode.com/problems/search-in-rotated-sorted-array/)
 - [ ] [Find Minimum in Rotated Sorted Array](https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/)
 - [ ] [Time Based Key-Value Store](https://leetcode.com/problems/time-based-key-value-store/)
@@ -76,11 +76,11 @@ This tracker follows the [NeetCode 150](https://neetcode.io/practice?tab=neetcod
 ## Trees
 
 - [x] [Invert Binary Tree](https://leetcode.com/problems/invert-binary-tree/)
-- [ ] [Maximum Depth of Binary Tree](https://leetcode.com/problems/maximum-depth-of-binary-tree/)
+- [x] [Maximum Depth of Binary Tree](https://leetcode.com/problems/maximum-depth-of-binary-tree/)
 - [x] [Diameter of Binary Tree](https://leetcode.com/problems/diameter-of-binary-tree/)
 - [x] [Balanced Binary Tree](https://leetcode.com/problems/balanced-binary-tree/)
-- [ ] [Same Tree](https://leetcode.com/problems/same-tree/)
-- [ ] [Subtree of Another Tree](https://leetcode.com/problems/subtree-of-another-tree/)
+- [x] [Same Tree](https://leetcode.com/problems/same-tree/)
+- [x] [Subtree of Another Tree](https://leetcode.com/problems/subtree-of-another-tree/)
 - [ ] [Lowest Common Ancestor of a BST](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/)
 - [ ] [Binary Tree Level Order Traversal](https://leetcode.com/problems/binary-tree-level-order-traversal/)
 - [ ] [Binary Tree Right Side View](https://leetcode.com/problems/binary-tree-right-side-view/)
@@ -99,8 +99,8 @@ This tracker follows the [NeetCode 150](https://neetcode.io/practice?tab=neetcod
 
 ## Heap / Priority Queue
 
-- [ ] [Kth Largest Element in a Stream](https://leetcode.com/problems/kth-largest-element-in-a-stream/)
-- [ ] [Last Stone Weight](https://leetcode.com/problems/last-stone-weight/)
+- [x] [Kth Largest Element in a Stream](https://leetcode.com/problems/kth-largest-element-in-a-stream/)
+- [x] [Last Stone Weight](https://leetcode.com/problems/last-stone-weight/)
 - [ ] [K Closest Points to Origin](https://leetcode.com/problems/k-closest-points-to-origin/)
 - [ ] [Kth Largest Element in an Array](https://leetcode.com/problems/kth-largest-element-in-an-array/)
 - [ ] [Task Scheduler](https://leetcode.com/problems/task-scheduler/)
@@ -109,7 +109,7 @@ This tracker follows the [NeetCode 150](https://neetcode.io/practice?tab=neetcod
 
 ## Backtracking
 
-- [ ] [Subsets](https://leetcode.com/problems/subsets/)
+- [x] [Subsets](https://leetcode.com/problems/subsets/)
 - [ ] [Combination Sum](https://leetcode.com/problems/combination-sum/)
 - [ ] [Permutations](https://leetcode.com/problems/permutations/)
 - [ ] [Subsets II](https://leetcode.com/problems/subsets-ii/)
@@ -146,5 +146,5 @@ This tracker follows the [NeetCode 150](https://neetcode.io/practice?tab=neetcod
 
 ## 1D Dynamic Programming
 
-- [ ] [Climbing Stairs](https://leetcode.com/problems/climbing-stairs/)
+- [x] [Climbing Stairs](https://leetcode.com/problems/climbing-stairs/)
 

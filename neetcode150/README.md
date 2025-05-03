@@ -123,7 +123,7 @@ This tracker follows the [NeetCode 150](https://neetcode.io/practice?tab=neetcod
 
 - [ ] [Number of Islands](https://leetcode.com/problems/number-of-islands/)
 - [ ] [Clone Graph](https://leetcode.com/problems/clone-graph/)
-- [ ] [Max Area of Island](https://leetcode.com/problems/max-area-of-island/)
+- [x] [Max Area of Island](https://leetcode.com/problems/max-area-of-island/)
 - [ ] [Pacific Atlantic Water Flow](https://leetcode.com/problems/pacific-atlantic-water-flow/)
 - [ ] [Surrounded Regions](https://leetcode.com/problems/surrounded-regions/)
 - [ ] [Rotting Oranges](https://leetcode.com/problems/rotting-oranges/)

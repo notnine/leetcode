@@ -101,7 +101,7 @@ This tracker follows the [NeetCode 150](https://neetcode.io/practice?tab=neetcod
 
 - [x] [Kth Largest Element in a Stream](https://leetcode.com/problems/kth-largest-element-in-a-stream/)
 - [x] [Last Stone Weight](https://leetcode.com/problems/last-stone-weight/)
-- [ ] [K Closest Points to Origin](https://leetcode.com/problems/k-closest-points-to-origin/)
+- [x] [K Closest Points to Origin](https://leetcode.com/problems/k-closest-points-to-origin/)
 - [ ] [Kth Largest Element in an Array](https://leetcode.com/problems/kth-largest-element-in-an-array/)
 - [ ] [Task Scheduler](https://leetcode.com/problems/task-scheduler/)
 - [ ] [Design Twitter](https://leetcode.com/problems/design-twitter/)
@@ -111,7 +111,7 @@ This tracker follows the [NeetCode 150](https://neetcode.io/practice?tab=neetcod
 
 - [x] [Subsets](https://leetcode.com/problems/subsets/)
 - [ ] [Combination Sum](https://leetcode.com/problems/combination-sum/)
-- [ ] [Permutations](https://leetcode.com/problems/permutations/)
+- [x] [Permutations](https://leetcode.com/problems/permutations/)
 - [ ] [Subsets II](https://leetcode.com/problems/subsets-ii/)
 - [ ] [Combination Sum II](https://leetcode.com/problems/combination-sum-ii/)
 - [ ] [Word Search](https://leetcode.com/problems/word-search/)

@@ -121,7 +121,7 @@ This tracker follows the [NeetCode 150](https://neetcode.io/practice?tab=neetcod
 
 ## Graphs
 
-- [ ] [Number of Islands](https://leetcode.com/problems/number-of-islands/)
+- [x] [Number of Islands](https://leetcode.com/problems/number-of-islands/)
 - [ ] [Clone Graph](https://leetcode.com/problems/clone-graph/)
 - [x] [Max Area of Island](https://leetcode.com/problems/max-area-of-island/)
 - [ ] [Pacific Atlantic Water Flow](https://leetcode.com/problems/pacific-atlantic-water-flow/)

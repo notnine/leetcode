@@ -61,7 +61,7 @@ This tracker follows the [NeetCode 150](https://neetcode.io/practice?tab=neetcod
 
 ## Linked List
 
-- [ ] [Reverse Linked List](https://leetcode.com/problems/reverse-linked-list/)
+- [x] [Reverse Linked List](https://leetcode.com/problems/reverse-linked-list/)
 - [x] [Merge Two Sorted Lists](https://leetcode.com/problems/merge-two-sorted-lists/)
 - [ ] [Reorder List](https://leetcode.com/problems/reorder-list/)
 - [ ] [Remove Nth Node From End of List](https://leetcode.com/problems/remove-nth-node-from-end-of-list/)

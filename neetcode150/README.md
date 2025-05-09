@@ -110,7 +110,7 @@ This tracker follows the [NeetCode 150](https://neetcode.io/practice?tab=neetcod
 ## Backtracking
 
 - [x] [Subsets](https://leetcode.com/problems/subsets/)
-- [ ] [Combination Sum](https://leetcode.com/problems/combination-sum/)
+- [x] [Combination Sum](https://leetcode.com/problems/combination-sum/)
 - [x] [Permutations](https://leetcode.com/problems/permutations/)
 - [ ] [Subsets II](https://leetcode.com/problems/subsets-ii/)
 - [ ] [Combination Sum II](https://leetcode.com/problems/combination-sum-ii/)
@@ -124,7 +124,7 @@ This tracker follows the [NeetCode 150](https://neetcode.io/practice?tab=neetcod
 - [x] [Number of Islands](https://leetcode.com/problems/number-of-islands/)
 - [x] [Clone Graph](https://leetcode.com/problems/clone-graph/)
 - [x] [Max Area of Island](https://leetcode.com/problems/max-area-of-island/)
-- [ ] [Pacific Atlantic Water Flow](https://leetcode.com/problems/pacific-atlantic-water-flow/)
+- [x] [Pacific Atlantic Water Flow](https://leetcode.com/problems/pacific-atlantic-water-flow/)
 - [ ] [Surrounded Regions](https://leetcode.com/problems/surrounded-regions/)
 - [ ] [Rotting Oranges](https://leetcode.com/problems/rotting-oranges/)
 - [ ] [Walls and Gates](https://leetcode.com/problems/walls-and-gates/)

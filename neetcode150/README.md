@@ -69,7 +69,7 @@ This tracker follows the [NeetCode 150](https://neetcode.io/practice?tab=neetcod
 - [ ] [Add Two Numbers](https://leetcode.com/problems/add-two-numbers/)
 - [ ] [Linked List Cycle](https://leetcode.com/problems/linked-list-cycle/)
 - [ ] [Find the Duplicate Number](https://leetcode.com/problems/find-the-duplicate-number/)
-- [ ] [LRU Cache](https://leetcode.com/problems/lru-cache/)
+- [x] [LRU Cache](https://leetcode.com/problems/lru-cache/)
 - [ ] [Merge k Sorted Lists](https://leetcode.com/problems/merge-k-sorted-lists/)
 - [ ] [Reverse Nodes in k-Group](https://leetcode.com/problems/reverse-nodes-in-k-group/)
 

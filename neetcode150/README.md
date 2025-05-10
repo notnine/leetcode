@@ -125,7 +125,7 @@ This tracker follows the [NeetCode 150](https://neetcode.io/practice?tab=neetcod
 - [x] [Clone Graph](https://leetcode.com/problems/clone-graph/)
 - [x] [Max Area of Island](https://leetcode.com/problems/max-area-of-island/)
 - [x] [Pacific Atlantic Water Flow](https://leetcode.com/problems/pacific-atlantic-water-flow/)
-- [ ] [Surrounded Regions](https://leetcode.com/problems/surrounded-regions/)
+- [x] [Surrounded Regions](https://leetcode.com/problems/surrounded-regions/)
 - [ ] [Rotting Oranges](https://leetcode.com/problems/rotting-oranges/)
 - [ ] [Walls and Gates](https://leetcode.com/problems/walls-and-gates/)
 - [ ] [Course Schedule](https://leetcode.com/problems/course-schedule/)

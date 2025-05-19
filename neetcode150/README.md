@@ -43,8 +43,8 @@ This tracker follows the [NeetCode 150](https://neetcode.io/practice?tab=neetcod
 
 - [x] [Valid Parentheses](https://leetcode.com/problems/valid-parentheses/)
 - [x] [Min Stack](https://leetcode.com/problems/min-stack/)
-- [ ] [Evaluate Reverse Polish Notation](https://leetcode.com/problems/evaluate-reverse-polish-notation/)
-- [ ] [Generate Parentheses](https://leetcode.com/problems/generate-parentheses/)
+- [x] [Evaluate Reverse Polish Notation](https://leetcode.com/problems/evaluate-reverse-polish-notation/)
+- [x] [Generate Parentheses](https://leetcode.com/problems/generate-parentheses/)
 - [ ] [Daily Temperatures](https://leetcode.com/problems/daily-temperatures/)
 - [ ] [Car Fleet](https://leetcode.com/problems/car-fleet/)
 - [ ] [Largest Rectangle in Histogram](https://leetcode.com/problems/largest-rectangle-in-histogram/)

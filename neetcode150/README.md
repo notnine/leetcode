@@ -148,3 +148,6 @@ This tracker follows the [NeetCode 150](https://neetcode.io/practice?tab=neetcod
 
 - [x] [Climbing Stairs](https://leetcode.com/problems/climbing-stairs/)
 
+## 2D Dyanmic Programming
+- [x] [Edit Distance]
+

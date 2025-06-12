@@ -28,7 +28,7 @@ This tracker follows the [NeetCode 150](https://neetcode.io/practice?tab=neetcod
 - [x] [Two Sum II - Input Array Is Sorted](https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/)
 - [x] [3Sum](https://leetcode.com/problems/3sum/)
 - [x] [Container With Most Water](https://leetcode.com/problems/container-with-most-water/)
-- [ ] [Trapping Rain Water](https://leetcode.com/problems/trapping-rain-water/)
+- [x] [Trapping Rain Water](https://leetcode.com/problems/trapping-rain-water/)
 
 ## Sliding Window
 

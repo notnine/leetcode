@@ -20,7 +20,7 @@ This tracker follows the [NeetCode 150](https://neetcode.io/practice?tab=neetcod
 - [x] [Product of Array Except Self](https://leetcode.com/problems/product-of-array-except-self/)
 - [x] [Valid Sudoku](https://leetcode.com/problems/valid-sudoku/)
 - [x] [Encode and Decode Strings](https://leetcode.com/problems/encode-and-decode-strings/)
-- [ ] [Longest Consecutive Sequence](https://leetcode.com/problems/longest-consecutive-sequence/)
+- [x] [Longest Consecutive Sequence](https://leetcode.com/problems/longest-consecutive-sequence/)
 
 ## Two Pointers
 

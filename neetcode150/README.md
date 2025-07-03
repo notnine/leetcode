@@ -37,7 +37,7 @@ This tracker follows the [NeetCode 150](https://neetcode.io/practice?tab=neetcod
 - [x] [Longest Repeating Character Replacement](https://leetcode.com/problems/longest-repeating-character-replacement/)
 - [x] [Permutation in String](https://leetcode.com/problems/permutation-in-string/)
 - [x] [Minimum Window Substring](https://leetcode.com/problems/minimum-window-substring/)
-- [ ] [Sliding Window Maximum](https://leetcode.com/problems/sliding-window-maximum/)
+- [x] [Sliding Window Maximum](https://leetcode.com/problems/sliding-window-maximum/)
 
 ## Stack
 
@@ -46,8 +46,8 @@ This tracker follows the [NeetCode 150](https://neetcode.io/practice?tab=neetcod
 - [x] [Evaluate Reverse Polish Notation](https://leetcode.com/problems/evaluate-reverse-polish-notation/)
 - [x] [Generate Parentheses](https://leetcode.com/problems/generate-parentheses/)
 - [x] [Daily Temperatures](https://leetcode.com/problems/daily-temperatures/)
-- [ ] [Car Fleet](https://leetcode.com/problems/car-fleet/)
-- [ ] [Largest Rectangle in Histogram](https://leetcode.com/problems/largest-rectangle-in-histogram/)
+- [x] [Car Fleet](https://leetcode.com/problems/car-fleet/)
+- [x] [Largest Rectangle in Histogram](https://leetcode.com/problems/largest-rectangle-in-histogram/)
 
 ## Binary Search
 
@@ -56,22 +56,22 @@ This tracker follows the [NeetCode 150](https://neetcode.io/practice?tab=neetcod
 - [x] [Koko Eating Bananas](https://leetcode.com/problems/koko-eating-bananas/)
 - [x] [Search in Rotated Sorted Array](https://leetcode.com/problems/search-in-rotated-sorted-array/)
 - [x] [Find Minimum in Rotated Sorted Array](https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/)
-- [ ] [Time Based Key-Value Store](https://leetcode.com/problems/time-based-key-value-store/)
-- [ ] [Median of Two Sorted Arrays](https://leetcode.com/problems/median-of-two-sorted-arrays/)
+- [x] [Time Based Key-Value Store](https://leetcode.com/problems/time-based-key-value-store/)
+- [x] [Median of Two Sorted Arrays](https://leetcode.com/problems/median-of-two-sorted-arrays/)
 
 ## Linked List
 
 - [x] [Reverse Linked List](https://leetcode.com/problems/reverse-linked-list/)
 - [x] [Merge Two Sorted Lists](https://leetcode.com/problems/merge-two-sorted-lists/)
-- [ ] [Reorder List](https://leetcode.com/problems/reorder-list/)
+- [x] [Reorder List](https://leetcode.com/problems/reorder-list/)
 - [x] [Remove Nth Node From End of List](https://leetcode.com/problems/remove-nth-node-from-end-of-list/)
 - [x] [Copy List with Random Pointer](https://leetcode.com/problems/copy-list-with-random-pointer/)
-- [ ] [Add Two Numbers](https://leetcode.com/problems/add-two-numbers/)
-- [ ] [Linked List Cycle](https://leetcode.com/problems/linked-list-cycle/)
-- [ ] [Find the Duplicate Number](https://leetcode.com/problems/find-the-duplicate-number/)
+- [x] [Add Two Numbers](https://leetcode.com/problems/add-two-numbers/)
+- [x] [Linked List Cycle](https://leetcode.com/problems/linked-list-cycle/)
+- [x] [Find the Duplicate Number](https://leetcode.com/problems/find-the-duplicate-number/)
 - [x] [LRU Cache](https://leetcode.com/problems/lru-cache/)
-- [ ] [Merge k Sorted Lists](https://leetcode.com/problems/merge-k-sorted-lists/)
-- [ ] [Reverse Nodes in k-Group](https://leetcode.com/problems/reverse-nodes-in-k-group/)
+- [x] [Merge k Sorted Lists](https://leetcode.com/problems/merge-k-sorted-lists/)
+- [x] [Reverse Nodes in k-Group](https://leetcode.com/problems/reverse-nodes-in-k-group/)
 
 ## Trees
 
@@ -84,18 +84,18 @@ This tracker follows the [NeetCode 150](https://neetcode.io/practice?tab=neetcod
 - [x] [Lowest Common Ancestor of a BST](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/)
 - [x] [Binary Tree Level Order Traversal](https://leetcode.com/problems/binary-tree-level-order-traversal/)
 - [x] [Binary Tree Right Side View](https://leetcode.com/problems/binary-tree-right-side-view/)
-- [ ] [Count Good Nodes in Binary Tree](https://leetcode.com/problems/count-good-nodes-in-binary-tree/)
-- [ ] [Validate Binary Search Tree](https://leetcode.com/problems/validate-binary-search-tree/)
-- [ ] [Kth Smallest Element in a BST](https://leetcode.com/problems/kth-smallest-element-in-a-bst/)
-- [ ] [Construct Binary Tree from Preorder and Inorder Traversal](https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/)
-- [ ] [Binary Tree Maximum Path Sum](https://leetcode.com/problems/binary-tree-maximum-path-sum/)
-- [ ] [Serialize and Deserialize Binary Tree](https://leetcode.com/problems/serialize-and-deserialize-binary-tree/)
+- [x] [Count Good Nodes in Binary Tree](https://leetcode.com/problems/count-good-nodes-in-binary-tree/)
+- [x] [Validate Binary Search Tree](https://leetcode.com/problems/validate-binary-search-tree/)
+- [x] [Kth Smallest Element in a BST](https://leetcode.com/problems/kth-smallest-element-in-a-bst/)
+- [x] [Construct Binary Tree from Preorder and Inorder Traversal](https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/)
+- [x] [Binary Tree Maximum Path Sum](https://leetcode.com/problems/binary-tree-maximum-path-sum/)
+- [x] [Serialize and Deserialize Binary Tree](https://leetcode.com/problems/serialize-and-deserialize-binary-tree/)
 
 ## Tries
 
-- [ ] [Implement Trie (Prefix Tree)](https://leetcode.com/problems/implement-trie-prefix-tree/)
-- [ ] [Design Add and Search Words Data Structure](https://leetcode.com/problems/design-add-and-search-words-data-structure/)
-- [ ] [Word Search II](https://leetcode.com/problems/word-search-ii/)
+- [x] [Implement Trie (Prefix Tree)](https://leetcode.com/problems/implement-trie-prefix-tree/)
+- [x] [Design Add and Search Words Data Structure](https://leetcode.com/problems/design-add-and-search-words-data-structure/)
+- [x] [Word Search II](https://leetcode.com/problems/word-search-ii/)
 
 ## Heap / Priority Queue
 
@@ -103,9 +103,9 @@ This tracker follows the [NeetCode 150](https://neetcode.io/practice?tab=neetcod
 - [x] [Last Stone Weight](https://leetcode.com/problems/last-stone-weight/)
 - [x] [K Closest Points to Origin](https://leetcode.com/problems/k-closest-points-to-origin/)
 - [x] [Kth Largest Element in an Array](https://leetcode.com/problems/kth-largest-element-in-an-array/)
-- [ ] [Task Scheduler](https://leetcode.com/problems/task-scheduler/)
-- [ ] [Design Twitter](https://leetcode.com/problems/design-twitter/)
-- [ ] [Find Median from Data Stream](https://leetcode.com/problems/find-median-from-data-stream/)
+- [x] [Task Scheduler](https://leetcode.com/problems/task-scheduler/)
+- [x] [Design Twitter](https://leetcode.com/problems/design-twitter/)
+- [x] [Find Median from Data Stream](https://leetcode.com/problems/find-median-from-data-stream/)
 
 ## Backtracking
 

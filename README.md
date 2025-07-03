@@ -1,10 +1,11 @@
 # LeetCode Study Plans
 
-This repository tracks progress through three LeetCode study plans, each organized into its own directory:
+This repository tracks progress through 4 LeetCode study plans, each organized into its own directory:
 
-- 📘 **leetcode75/** – Official [LeetCode 75](https://leetcode.com/studyplan/leetcode-75/) study plan covering foundational topics. **Done**
 - 🔥 **blind75/** – The classic [Blind 75](https://www.techinterviewhandbook.org/grind75) list of must-know interview problems.
-- 💡 **neetcode150/** – [NeetCode 150](https://neetcode.io/) structured guide covering patterns and advanced techniques.
+- 📘 **leetcode75/** – Official [LeetCode 75](https://leetcode.com/studyplan/leetcode-75/) study plan covering foundational topics. **Done**
+- 💡 **neetcode150/** – [NeetCode 150](https://neetcode.io/) structured guide covering patterns and advanced techniques, blind75 + 75 more.
+- 💻 **neetcode250/** – [NeetCode 250](https://neetcode.io/) neetcode150 + 100.
 
 Each directory includes:
 - A dedicated `README.md` with problem lists and progress tracking

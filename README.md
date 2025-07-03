@@ -2,9 +2,9 @@
 
 This repository tracks progress through 4 LeetCode study plans, each organized into its own directory:
 
-- 🔥 **blind75/** – The classic [Blind 75](https://www.techinterviewhandbook.org/grind75) list of must-know interview problems.
+- 🔥 **blind75/** – The classic [Blind 75](https://www.techinterviewhandbook.org/grind75) list of must-know interview problems. **Done**
 - 📘 **leetcode75/** – Official [LeetCode 75](https://leetcode.com/studyplan/leetcode-75/) study plan covering foundational topics. **Done**
-- 💡 **neetcode150/** – [NeetCode 150](https://neetcode.io/) structured guide covering patterns and advanced techniques, blind75 + 75 more.
+- 💡 **neetcode150/** – [NeetCode 150](https://neetcode.io/) blind75 + 75. **Done**
 - 💻 **neetcode250/** – [NeetCode 250](https://neetcode.io/) neetcode150 + 100.
 
 Each directory includes:

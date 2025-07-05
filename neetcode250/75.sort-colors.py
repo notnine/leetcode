@@ -10,6 +10,7 @@ class Solution:
         """
         Do not return anything, modify nums in-place instead.
         """
+        # dutch flag algo: put the 1's in the front & the 2's in the back
         l, r = 0, len(nums) - 1
         i = 0
 

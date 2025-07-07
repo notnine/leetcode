@@ -13,15 +13,15 @@
 
 class Solution:
     def getIntersectionNode(self, headA: ListNode, headB: ListNode) -> Optional[ListNode]:
-        visitted = set()
+        if not headA or not headB: return None
 
-        while headA:
-            visitted.add(headA)
-            headA = headA.next
-        
-        while headB:
-            if headB in visitted:
-                return headB
-            headB = headB.next
+        ptr_a = headA
+        ptr_b = headB
+
+        while ptr_a is not ptr_b:
+            ptr_a = ptr_a.next if ptr_a else headB
+            ptr_b = ptr_b.next if ptr_b else headA
+        return ptr_a
+            
 # @lc code=end
 

@@ -143,7 +143,7 @@ This tracker follows the [NeetCode 150](https://neetcode.io/practice?tab=neetcod
 ## Advanced Graphs
 
 - [ ] [Reconstruct Itinerary](https://leetcode.com/problems/reconstruct-itinerary/)
-- [ ] [Min Cost to Connect All Points](https://leetcode.com/problems/min-cost-to-connect-all-points/)
+- [x] [Min Cost to Connect All Points](https://leetcode.com/problems/min-cost-to-connect-all-points/)
 - [ ] [Network Delay Time](https://leetcode.com/problems/network-delay-time/)
 - [ ] [Swim in Rising Water](https://leetcode.com/problems/swim-in-rising-water/)
 - [ ] [Alien Dictionary](https://leetcode.com/problems/alien-dictionary/)

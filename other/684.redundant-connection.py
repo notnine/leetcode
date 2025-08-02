@@ -43,7 +43,7 @@ class Solution:
         # build union find, but if we find that x, y share the same root, return
         for x, y in edges:
             x, y = x - 1, y - 1
-            root_x, root_y = union_find.find(x), union_find.find(y)
+            root_x, root_y = union_find.find(x), union_find.find(y) # O(E \alpha{n}) time
             if root_x == root_y:
                 return [x+1, y+1]
             else:

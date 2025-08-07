@@ -14,8 +14,9 @@ class Solution:
 
         for n in nums:
             curr += n
-            if (k - n) in prefix_sums:
-                res += prefix_sums[k-n]
+            if (curr - k) in prefix_sums:
+                res += prefix_sums[curr - k]
+            prefix_sums[curr] += 1
 
         return res
 

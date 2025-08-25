@@ -14,17 +14,35 @@ class Solution:
     def reverseBetween(self, head: Optional[ListNode], left: int, right: int) -> Optional[ListNode]:
         if not head or left == right:
             return head
+
+        dummy = ListNode(0, head)
+        prev = dummy
+
+        # point prev to left - 1
+        for _ in range(1, left):
+            prev = prev.next
         
-        # edge case, if left == 1, then detached left - 1 is None
+        left_minus_one = prev
+        sublist_tail = left_minus_one.next
+
+        # reverse our sublist
+        sublist_prev = None
+        sublist_curr = sublist_tail
+        # 1 -> 2 -> 3 -> 4 -> 5 ; reversing 2 to 4
+        for _ in range(left, right + 1):
+            temp = sublist_curr.next
+            sublist_curr.next = sublist_prev
+            sublist_prev, sublist_curr = sublist_curr, temp
         
-        # detach left - 1 & right + 1
-        
-        prev, curr = None, head
-        while curr:
+
+        # attach left_minus_one to sublist head
+        left_minus_one.next = sublist_prev
+        # attach sublist tail to right + 1
+        sublist_tail.next = sublist_curr
+
+        return dummy.next
 
 
-        # run reverseLinkedList on left as head
 
-        # re-attach left - 1 to head of reversed, and tail of reversed to right + 1
 # @lc code=end
 

@@ -13,7 +13,7 @@
 #         self.right = right
 class Solution:
     def rob(self, root: Optional[TreeNode]) -> int:
-                memo = {}
+        memo = {}
 
         # skip is true if node is skipped
         def dfs(node: Optional[TreeNode], skip: bool) -> int:

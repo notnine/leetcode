@@ -14,35 +14,43 @@ class Solution:
         
         target = total // 4
 
+        curr = [0, 0, 0, 0] # left, top, right, bottom
+        matchsticks.sort(reverse=True)
         memo = {}
 
-        # return true if we can use all the matchsticks to make 1 square, where left, top, right, bottom represent the totals at each side so far
-        def dfs(left: int, top: int, right: int, bottom: int, i: int) -> bool:
-            if (left, top, right, bottom, i) in memo:
-                return memo[(left, top, right, bottom, i)]
+        def dfs(i: int) -> bool:
+            if i in memo:
+                return memo[i]
 
-            # if we've used up all the matchsticks
             if i == len(matchsticks):
-                if left == target and top == target and right == target and bottom == target:
-                    return True
-                else:
-                    return False
-            
-            # if 1 side has too much
-            if left > target or top > target or right > target or bottom > target:
-                return False
+                return True
 
-            # try putting this matchstick in all sides
-            put_left = dfs(left + matchsticks[i], top, right, bottom, i + 1) if left + matchsticks[i] <= target else False
-            put_top = dfs(left, top + matchsticks[i], right, bottom, i + 1) if top + matchsticks[i] <= target else False
-            put_right = dfs(left, top, right + matchsticks[i], bottom, i + 1) if right + matchsticks[i] <= target else False
-            put_bottom = dfs(left, top, right, bottom + matchsticks[i], i + 1) if bottom + matchsticks[i] <= target else False
-            memo[(left, top, right, bottom, i)] = put_left or put_top or put_right or put_bottom
-            return memo[(left, top, right, bottom, i)]
-            
+            # put matchsticks[i] at left side
+            curr[0] += matchsticks[i]
+            put_left = dfs(i+1) if curr[0] <= target else False
+            curr[0] -= matchsticks[i]
 
-        return dfs(0, 0, 0, 0, 0)
-        
+            # put matchstick at top side
+            curr[1] += matchsticks[i]
+            put_top = dfs(i+1) if curr[1] <= target else False
+            curr[1] -= matchsticks[i]
+
+            # put matchstick at right side
+            curr[2] += matchsticks[i]
+            put_right = dfs(i+1) if curr[2] <= target else False
+            curr[2] -= matchsticks[i]
+
+            # put matchstick at bottom side
+            curr[3] += matchsticks[i]
+            put_bottom = dfs(i+1) if curr[3] <= target else False
+            curr[3] -= matchsticks[i]
+
+            memo[i] = put_left or put_top or put_right or put_bottom
+            return put_left or put_top or put_right or put_bottom
+
+
+        return dfs(0)
+
         
 # @lc code=end
 

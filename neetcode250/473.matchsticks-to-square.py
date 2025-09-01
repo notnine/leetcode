@@ -15,41 +15,24 @@ class Solution:
         target = total // 4
 
         curr = [0, 0, 0, 0] # left, top, right, bottom
-        matchsticks.sort(reverse=True)
-        memo = {}
+        matchsticks.sort(reverse=True) # early pruning: put down big matchsticks first
 
-        def dfs(i: int) -> bool:
-            if i in memo:
-                return memo[i]
-
-            if i == len(matchsticks):
+        def backtrack(i: int) -> bool:
+            if i == len(matchsticks) and curr[0] == curr[1] == curr[2] == curr[3] == target:
                 return True
 
-            # put matchsticks[i] at left side
-            curr[0] += matchsticks[i]
-            put_left = dfs(i+1) if curr[0] <= target else False
-            curr[0] -= matchsticks[i]
+            # try putting matchstick in all sides
+            for j in range(4):
+                if curr[j] + matchsticks[i] <= target:
+                    curr[j] += matchsticks[i]
+                    if backtrack(i+1):
+                        return True # early True return since we only need to find 1 sol
+                    curr[j] -= matchsticks[i] # take matchstick back to try putting it in another side
+                if curr[j] == 0: # if we just placed the matchstick into an empty side, don't need to try putting it in another side since they're all empty too (symmetrical)
+                        break
+            return False
 
-            # put matchstick at top side
-            curr[1] += matchsticks[i]
-            put_top = dfs(i+1) if curr[1] <= target else False
-            curr[1] -= matchsticks[i]
-
-            # put matchstick at right side
-            curr[2] += matchsticks[i]
-            put_right = dfs(i+1) if curr[2] <= target else False
-            curr[2] -= matchsticks[i]
-
-            # put matchstick at bottom side
-            curr[3] += matchsticks[i]
-            put_bottom = dfs(i+1) if curr[3] <= target else False
-            curr[3] -= matchsticks[i]
-
-            memo[i] = put_left or put_top or put_right or put_bottom
-            return put_left or put_top or put_right or put_bottom
-
-
-        return dfs(0)
+        return backtrack(0)
 
         
 # @lc code=end

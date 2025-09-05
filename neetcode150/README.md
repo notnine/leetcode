@@ -146,7 +146,7 @@ This tracker follows the [NeetCode 150](https://neetcode.io/practice?tab=neetcod
 - [x] [Min Cost to Connect All Points](https://leetcode.com/problems/min-cost-to-connect-all-points/)
 - [ ] [Network Delay Time](https://leetcode.com/problems/network-delay-time/)
 - [ ] [Swim in Rising Water](https://leetcode.com/problems/swim-in-rising-water/)
-- [ ] [Alien Dictionary](https://leetcode.com/problems/alien-dictionary/)
+- [x] [Alien Dictionary](https://leetcode.com/problems/alien-dictionary/)
 - [ ] [Cheapest Flights Within K Stops](https://leetcode.com/problems/cheapest-flights-within-k-stops/)
 
 ## 1D Dynamic Programming

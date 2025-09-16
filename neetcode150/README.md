@@ -122,7 +122,7 @@ This tracker follows the [NeetCode 150](https://neetcode.io/practice?tab=neetcod
 - [x] [Word Search](https://leetcode.com/problems/word-search/)
 - [x] [Palindrome Partitioning](https://leetcode.com/problems/palindrome-partitioning/)
 - [x] [Letter Combinations of a Phone Number](https://leetcode.com/problems/letter-combinations-of-a-phone-number/)
-- [ ] [N-Queens](https://leetcode.com/problems/n-queens/)
+- [x] [N-Queens](https://leetcode.com/problems/n-queens/)
 
 ## Graphs
 

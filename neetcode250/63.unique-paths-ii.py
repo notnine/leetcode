@@ -25,5 +25,6 @@ class Solution:
             return dp[(i, j)]
 
         return get_paths(0, 0)
+        # notice it's O(2 ^ (ROWS*COLS)) without memoization, O(ROWS*COLS) with memoization
 # @lc code=end
 

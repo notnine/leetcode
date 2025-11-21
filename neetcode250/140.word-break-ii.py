@@ -9,22 +9,29 @@ class Solution:
     def wordBreak(self, s: str, wordDict: List[str]) -> List[str]:
         word_set = set(wordDict)
         n = len(s)
-        res = []
+        memo = {}
 
         # i is the first index at s which is not in our partition yet
-        def backtrack(i: int, partition: List[str]) -> None:
+        def dfs(i: int) -> None:
+            if i in memo:
+                return memo[i]
             if i == n:
-                res.append(" ".join(partition))
-                return
+                return ['']
             
+            res = []
             for j in range(i + 1, n + 1):
-                # if s[i:j] is a word in word_set, backtrack it
+                # if s[i:j] is a word in word_set, dfs it
                 if s[i:j] in word_set:
-                    partition.append(s[i:j])
-                    backtrack(j, partition)
-                    partition.pop()
+                    tails = dfs(j)
+                    for tail in tails:
+                        if tail != '':
+                            res.append(s[i:j] + ' ' + tail)
+                        else:
+                            res.append(s[i:j])
+            
+            memo[i] = res
+            return res
         
-        backtrack(0, [])
-        return res
+        return dfs(0)
 # @lc code=end
 

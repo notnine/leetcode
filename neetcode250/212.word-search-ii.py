@@ -5,41 +5,57 @@
 #
 
 # @lc code=start
+class TrieNode:
+    def __init__(self, c: str = '', is_word: bool = False):
+        self.c = c
+        self.is_word = is_word
+        self.children = {}
+    
+class Trie:
+    def __init__(self):
+        self.root = TrieNode()
+
+    def insert(self, word: str):
+        node = self.root
+        for c in word:
+            if c not in node.children:
+                node.children[c] = TrieNode(c, False)
+            node = node.children[c]
+        node.is_word = True                
+
 class Solution:
     def findWords(self, board: List[List[str]], words: List[str]) -> List[str]:
         ROWS, COLS = len(board), len(board[0])
         directions = [(1,0), (0,1), (-1,0), (0,-1)]
-
-        # return True if word is in board (word search 1). curr_pos is the last visited pos, visited is our word so far (positions)
-        def dfs(word: str, visited: set, curr_pos: tuple) -> bool:
-            if word is None or word == '':
-                return True
-
-            for direction in directions:
-                new_i, new_j = direction[0] + curr_pos[0], direction[1] + curr_pos[1]
-                if 0 <= new_i < ROWS and 0 <= new_j < COLS and board[new_i][new_j] == word[0] and (new_i, new_j) not in visited:
-                    visited.add((new_i, new_j))
-                    if dfs(word[1:], visited, (new_i, new_j)): # if this route is possible return True early
-                        return True
-                    visited.remove((new_i, new_j))
-            return False
-
         res = []
+        trie = Trie()
         for word in words:
-            found_word = False
-            for i in range(ROWS):
-                for j in range(COLS):
-                    if board[i][j] == word[0]:
-                        if dfs(word[1:], {(i, j)}, (i, j)):
-                            res.append(word)
-                            found_word = True
-                    if found_word:
-                        break
-                if found_word:
-                    break
+            trie.insert(word)
 
-        return res                            
-                            
+        def dfs(node: TrieNode, r: int, c: int, visited: Set[tuple], path: str):
+            nonlocal res
+            if node.is_word:
+                res.append(path)
+                node.is_word = False   # avoid duplicates, i.e re-adding same word
+            for dr, dc in directions:
+                nr, nc = r + dr, c + dc
+                if 0 <= nr < ROWS and 0 <= nc < COLS and (nr, nc) not in visited and board[nr][nc] in node.children:
+                    ch = board[nr][nc]
+                    visited.add((nr, nc))
+                    dfs(node.children[ch], nr, nc, visited, path + ch)
+                    visited.remove((nr, nc))
+
+        for r in range(ROWS):
+            for c in range(COLS):
+                ch = board[r][c]
+                if ch in trie.root.children:
+                    visited = {(r, c)}
+                    dfs(trie.root.children[ch], r, c, visited, ch)
+                if len(res) == len(words):
+                    return res
+        
+        return res
+
 
 # @lc code=end
 

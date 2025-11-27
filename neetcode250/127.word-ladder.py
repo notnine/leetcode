@@ -12,28 +12,25 @@ class Solution:
 
         if endWord not in wordList:
             return 0
-        
-        # return True if word1 and word2 differ by 1 letter. Pre-req word1 != word2
-        def is_neighbor(word1: str, word2: str) -> bool:
-            diffs = 0
-            n = len(word1)
-            for i in range(n):
-                if word1[i] != word2[i]:
-                    diffs += 1
-                if diffs > 1:
-                    return False
-            return True
+
+        wordSet = set(wordList)
+        letters = 'abcdefghijklmnopqrstuvwxyz'
         
         # create adj list
         neighbors = defaultdict(list)
         wordList.append(beginWord)
         n = len(wordList)
-        for i in range(n):
-            for j in range(i + 1, n):
-                word1, word2 = wordList[i], wordList[j]
-                if is_neighbor(word1, word2):
-                    neighbors[word1].append(word2)
-                    neighbors[word2].append(word1)
+        for word in wordList:
+            # find all neighbors of word
+            for i, c in enumerate(word):
+                for letter in letters:
+                    if letter == c:
+                        continue
+                    word_to_check = word[:i] + letter + word[i+1:]
+                    if word_to_check in wordSet:
+                        neighbors[word].append(word_to_check)
+                        neighbors[word_to_check].append(word)
+
 
         # run bfs, try to reach endWord asap
         q = deque([beginWord])
@@ -53,5 +50,6 @@ class Solution:
             res += 1
         
         return 0
+
 # @lc code=end
 

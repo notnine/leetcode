@@ -5,13 +5,17 @@
 #
 
 # @lc code=start
-from functools import lru_cache
 from typing import List
 
 class Solution:
     def stoneGameII(self, piles: List[int]) -> int:
         n = len(piles)
         memo = {}
+
+        # suffix sums so we can get sum of any consecutive segment in O(1)
+        suffix = [0] * (n + 1)
+        for i in range(n - 1, -1, -1):
+            suffix[i] = piles[i] + suffix[i + 1]
 
         def get_alice_max_stones(alice_turn: bool, i: int, M: int) -> int:
             if (alice_turn, i, M) in memo:
@@ -23,7 +27,7 @@ class Solution:
             if 2 * M >= n - i:
                 if alice_turn:
                     # Alice gets all remaining stones
-                    return sum(piles[i:])
+                    return suffix[i]
                 else:
                     # Bob takes them, Alice gets 0 more
                     return 0
@@ -42,17 +46,19 @@ class Solution:
             else:
                 # Alice wants to MAXIMIZE her stones
                 alice_max = 0
-                additional = 0
+                #additional = 0
                 for alice_takes in range(1, min(2 * M, n - i) + 1):
-                    additional += piles[i + alice_takes - 1]
+                    #additional += piles[i + alice_takes - 1]
+                    taken_sum = suffix[i] - suffix[i + alice_takes]  # O(1) sum using suffix
                     alice_max = max(
                         alice_max,
-                        additional + get_alice_max_stones(False, i + alice_takes, max(M, alice_takes))
+                        taken_sum + get_alice_max_stones(False, i + alice_takes, max(M, alice_takes))
                     )
                 memo[(alice_turn, i, M)] = alice_max
                 return alice_max
 
         return get_alice_max_stones(True, 0, 1)
+
 
 # @lc code=end
 

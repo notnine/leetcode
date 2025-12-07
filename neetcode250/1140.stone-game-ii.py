@@ -59,6 +59,5 @@ class Solution:
 
         return get_alice_max_stones(True, 0, 1)
 
-
 # @lc code=end
 

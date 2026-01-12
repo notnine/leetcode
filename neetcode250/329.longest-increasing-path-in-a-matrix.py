@@ -32,6 +32,6 @@ class Solution:
             for j in range(COLS):
                 visited = set()
                 res = max(res, 1 + dfs(i, j, visited))
-        return res
+        return res 
 # @lc code=end
 

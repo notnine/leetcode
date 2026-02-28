@@ -7,21 +7,20 @@
 # @lc code=start
 class Solution:
     def longestConsecutive(self, nums: List[int]) -> int:
-        if not nums:
-            return 0
+        seen = set()
 
-        num_set = set(nums)
-        res = 1
+        for num in nums:
+            seen.add(num)
 
-        # check each 'starting num'
-        for n in num_set:
-            if n - 1 not in num_set:
-                curr = 0
-                while n in num_set:
-                    curr += 1
-                    n += 1
-                res = max(res, curr)
-
+        res = 0
+        for num in nums:
+            curr_seq_len = 1
+            if num - 1 not in seen: # start of a consec. seq.
+                while num + 1 in seen:
+                    curr_seq_len += 1
+                    num += 1
+            res = max(res, curr_seq_len)
+        
         return res
 
         

@@ -9,30 +9,20 @@ from collections import deque, defaultdict
 class Solution:
     def findCheapestPrice(self, n: int, flights: List[List[int]], src: int, dst: int, k: int) -> int:
 
-        # create adj. graph from flights
-        adj = defaultdict(list) # adj[from] = (to, price)
-        for from_i, to_i, price_i in flights:
-            adj[from_i].append((to_i, price_i))
+        # approach 1: bellman ford with k relaxations
+        cost = [float('inf')] * n # cost to get to i
+        cost[src] = 0
+
+        for _ in range(k+1):
+            cost_copied = cost.copy() # deep copy to avoid "2 trips" in 1 round
+
+            for from_i, to_i, price_i in flights:
+                # see if we can get a cheaper flight to to_i
+                cost_to_i = cost[from_i] + price_i
+                cost_copied[to_i] = min(cost_to_i, cost_copied[to_i])
+            
+            cost = cost_copied
         
-        # approach 0: bfs, keep track of price so far
-        res = float('inf')
-        my_d = deque([(src, 0)]) # queue tuples of (curr node, price so far)
-        trips = -1
-
-        while len(my_d) > 0:
-            trips += 1
-
-            for i in range(len(my_d)):
-                node, price_so_far = my_d.popleft()
-                if node == dst:
-                    res = min(res, price_so_far)
-                    continue
-                for to_i, price_i in adj[node]:
-                    my_d.append((to_i, price_so_far + price_i))
-            
-            if trips == k+1:
-                return res
-            
-        return res if res != float('inf') else -1  
+        return cost[dst] if cost[dst] != float('inf') else -1 
 # @lc code=end
 

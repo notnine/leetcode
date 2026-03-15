@@ -10,23 +10,22 @@ class Solution:
         n = len(s)
         dp = [None] * n # dp[i] is True if can reach idx i
         dp[0] = True
+        reachables = 0
 
-        # loop runs O(n)
         for i in range(1, n):
-            # figure out if we can reach i
-            if s[i] == '1':
-                continue
+
+            # if window's old left border was reachable
+            if 0 <= i - maxJump - 1 < n and dp[i - maxJump - 1] is True:
+                reachables -= 1
             
-            prev_range = [None, None]
-            prev_range[0] = i - maxJump
-            prev_range[1] = i - minJump
-
-            # this loop runs O(maxJump - minJump)
-            for prev_idx in range(prev_range[0], prev_range[1]+1):
-                if 0 <= prev_idx < n and dp[prev_idx]:
-                    dp[i] = True
-                    break
-
-        return dp[n-1] if dp[n - 1] is not None else False  
+            # if window's new right border is reachable
+            if 0 <= i - minJump < n and dp[i - minJump] is True:
+                reachables += 1
+            
+            # then i is reachable at this point
+            if reachables > 0 and s[i] == '0':
+                dp[i] = True
+        
+        return dp[n - 1] if dp[n - 1] else False 
 # @lc code=end
 

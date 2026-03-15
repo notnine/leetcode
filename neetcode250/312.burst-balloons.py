@@ -7,34 +7,44 @@
 # @lc code=start
 class Solution:
     def maxCoins(self, nums: List[int]) -> int:
-        
-        # approach 1: pop 1 balloon and recurse
-        if not nums:
-            return 0
 
-        best = 0
+        # approach 2: dp[(l,r)] = max([dp[(l,k)] + dp[(k,r)] + nums[l] * nums[k] * nums[r]] for k in range(l+1, r))
+
+        # dp[(l, r)] is the max coins from popping all balloons between l and r exclusive.
+        # for each k in (l, r) as the last balloon to pop, first pop left and right sides optimally, then pop k for nums[l] * nums[k] * nums[r].
+
+        nums = [1] + nums + [1]
         n = len(nums)
-        # O(n)
-        for i in range(0, n):
-            # pop balloon at i
-            curr = 0
-            if i == 0:
-                if i + 1 < n:
-                    curr += nums[i] * nums[i+1]
-                else:
-                    curr += nums[i]
-            elif i == n - 1:
-                if i - 1 >= 0:
-                    curr += nums[i] * nums[i-1]
-                else:
-                    curr += nums[i]
-            else:
-                curr += nums[i-1] * nums[i] * nums[i+1]
-            nums_without_i = nums[0:i] + nums[i+1:n]
-            curr += self.maxCoins(nums_without_i) # we call maxCoins again, with n-1 length, so O(n-1)
-            best = max(best, curr)
-        
-        # so O(n!) overall
-        return best
+        dp = dict()
+
+        def dfs(l: int, r: int) -> int:
+            if (l, r) in dp:
+                return dp[(l, r)]
+
+            if r - l <= 1:
+                return 0
+
+            best_so_far = 0
+
+            for k in range(l+1, r):
+                # find optimal left side
+                optimal_left = dfs(l, k)                
+                
+                # find optimal right side
+                optimal_right = dfs(k, r)
+
+                curr_k = optimal_left + optimal_right + nums[l] * nums[k] * nums[r]
+                best_so_far = max(best_so_far, curr_k)
+            
+            dp[(l, r)] = best_so_far
+            return best_so_far
+
+
+        return dfs(0, n-1) # remember (l, r) are exclusive in the recursion relation
+
+        # run time analysis
+        # num of distinct subproblems: possible num of l, r pairs are n^2
+        # big o of each subproblem: possible num of k is r - l
+        # so it is (n^2) * (n) all in all, O(n^3)
 # @lc code=end
 

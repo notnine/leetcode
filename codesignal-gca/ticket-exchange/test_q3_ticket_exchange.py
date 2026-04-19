@@ -37,26 +37,28 @@ def reference_solution(operations):
                 heapq.heappush(heaps[event], price)
             qty[event][price] += amount
             totals[event] += amount
+
         elif kind == "reprice":
             _, event, old_price, new_price, amount = op
             if qty[event][old_price] < amount:
                 continue
             if old_price == new_price:
                 continue
+
             qty[event][old_price] -= amount
             if qty[event][new_price] == 0:
                 heapq.heappush(heaps[event], new_price)
             qty[event][new_price] += amount
+
         elif kind == "sell":
             _, event, need = op
             if totals[event] < need:
                 ans.append(-1)
                 continue
 
-            # Consume cheapest first. Because totals[event] >= need,
-            # this loop must finish without rollback.
             cost = 0
             totals[event] -= need
+
             while need > 0:
                 clean(event)
                 price = heaps[event][0]
@@ -65,7 +67,9 @@ def reference_solution(operations):
                 cost += price * take
                 need -= take
                 clean(event)
+
             ans.append(cost)
+
         else:
             raise ValueError(f"Unknown op: {kind}")
 
@@ -79,22 +83,27 @@ def brute_solution(operations):
 
     for op in operations:
         kind = op[0]
+
         if kind == "stock":
             _, event, price, amount = op
             inv[event][price] += amount
+
         elif kind == "reprice":
             _, event, old_price, new_price, amount = op
             if inv[event][old_price] >= amount:
-                inv[event][old_price] -= amount
-                if inv[event][old_price] == 0:
-                    del inv[event][old_price]
-                inv[event][new_price] += amount
+                if old_price != new_price:
+                    inv[event][old_price] -= amount
+                    if inv[event][old_price] == 0:
+                        del inv[event][old_price]
+                    inv[event][new_price] += amount
+
         elif kind == "sell":
             _, event, need = op
             total = sum(inv[event].values())
             if total < need:
                 ans.append(-1)
                 continue
+
             cost = 0
             for price in sorted(inv[event]):
                 if need == 0:
@@ -103,10 +112,13 @@ def brute_solution(operations):
                 inv[event][price] -= take
                 cost += take * price
                 need -= take
+
             for p in list(inv[event].keys()):
                 if inv[event][p] == 0:
                     del inv[event][p]
+
             ans.append(cost)
+
         else:
             raise ValueError(f"Unknown op: {kind}")
 
@@ -217,7 +229,7 @@ def fixed_tests():
             ["sell", "opera", 4],
             ["sell", "opera", 1],
         ],
-        [60, 30],
+        [80, 30],
     ))
 
     # Stale heap entries from full depletion and later restocking
@@ -281,16 +293,20 @@ def random_small_tests(rounds=300, seed=0):
     for t in range(rounds):
         ops = []
         num_ops = rng.randint(1, 80)
+
         for _ in range(num_ops):
             kind = rng.choices(["stock", "sell", "reprice"], weights=[5, 4, 3])[0]
             event = rng.choice(events)
+
             if kind == "stock":
                 price = rng.randint(1, 12)
                 qty = rng.randint(1, 8)
                 ops.append([kind, event, price, qty])
+
             elif kind == "sell":
                 qty = rng.randint(1, 12)
                 ops.append([kind, event, qty])
+
             else:
                 old_price = rng.randint(1, 12)
                 new_price = rng.randint(1, 12)
@@ -333,6 +349,7 @@ def performance_tests():
     for _ in range(70000):
         kind = rng.choices(["stock", "sell", "reprice"], weights=[6, 3, 2])[0]
         event = rng.choice(events)
+
         if kind == "stock":
             ops3.append([kind, event, rng.randint(1, 10**6), rng.randint(1, 5)])
         elif kind == "sell":
@@ -345,12 +362,15 @@ def performance_tests():
                 rng.randint(1, 10**6),
                 rng.randint(1, 3),
             ])
+
     run_performance_case("perf_large_mixed", ops3, max_seconds=4.0)
 
 
 if __name__ == "__main__":
     if not hasattr(mod, "solution"):
-        raise SystemExit("Could not find solution(operations) in q3_ticket_exchange_solution.py")
+        raise SystemExit(
+            "Could not find solution(operations) in q3_ticket_exchange_solution.py"
+        )
 
     try:
         fixed_tests()

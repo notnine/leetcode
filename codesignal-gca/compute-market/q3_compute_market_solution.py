@@ -67,15 +67,6 @@ Target complexity
 -----------------
 Aim for roughly O(total_operations * log M + buckets_touched * log M),
 where M is the number of active price buckets in one region.
-
-Suggested approach
-------------------
-For each region:
-- keep a hashmap: price -> units  (source of truth)
-- keep a min-heap of prices
-Use lazy deletion for stale heap entries.
-
-Implement your solution in the function below.
 """
 
 from typing import Any, List

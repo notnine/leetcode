@@ -70,8 +70,88 @@ where M is the number of active price buckets in one region.
 """
 
 from typing import Any, List
-
+from collections import defaultdict
+import heapq
 
 def solution(operations: List[List[Any]]) -> List[int]:
-    """Write your solution here."""
-    raise NotImplementedError
+   # ds to maintain
+   # a. dictionary region -> dictionary price -> units
+   region_to_price_units = defaultdict(dict)
+   # b. dictionary region -> min heap of prices (lazy deletion)
+   region_to_min_heap = defaultdict(list)
+   # c. dictionary region -> total units available
+   region_to_total_units = defaultdict(int)
+   res = []
+
+   for operation in operations:
+      op = operation[0]
+
+      # supply
+      # upadte a, b, c
+      if op == "supply":
+         region, price, units = operation[1], operation[2], operation[3]
+         a, b, c = region_to_price_units[region], region_to_min_heap[region], region_to_total_units[region]
+         # update b
+         if price not in a:
+            heapq.heappush(b, price)
+         # update a
+         if price not in a:
+            a[price] = units
+         else:
+            a[price] += units
+         # update c
+         region_to_total_units[region] += units
+
+      # allocate
+      # update a, b (if min price no longer avail, delete), c, res
+      elif op == "allocate":
+         region, units = operation[1], operation[2]
+         a, b, c = region_to_price_units[region], region_to_min_heap[region], region_to_total_units[region]
+         # if impossible skip
+         if c < units:
+            res.append(-1)
+            continue
+         amount_taken = 0
+         total_price = 0
+         while b and amount_taken < units:
+            min_price = heapq.heappop(b)
+            if a.get(min_price, 0) == 0:
+               continue
+            else:
+               amount_available = a.get(min_price, 0)
+               amount_to_take = min(amount_available, units - amount_taken)
+               total_price += amount_to_take * min_price
+               a[min_price] -= amount_to_take
+               if a[min_price] == 0:
+                  del a[min_price]
+               amount_taken += amount_to_take
+               if amount_to_take < amount_available:
+                  heapq.heappush(b, min_price)
+         region_to_total_units[region] -= units
+         res.append(total_price)
+
+      # rerate
+      # update a, b
+      elif op == "rerate":
+         region, old_price, new_price, units = operation[1], operation[2], operation[3], operation[4]
+         if old_price == new_price:
+            continue
+         a, b, c = region_to_price_units[region], region_to_min_heap[region], region_to_total_units[region]
+         # if impossible skip
+         if a.get(old_price, 0) < units:
+            continue
+         
+         # update b (min heap) if new_price is new
+         if a.get(new_price, 0) == 0:
+            heapq.heappush(b, new_price)
+
+         # update a
+         a[old_price] -= units
+         if a.get(old_price, 0) == 0:
+            del a[old_price]
+         if new_price not in a:
+            a[new_price] = units
+         else:
+            a[new_price] += units
+      
+   return res

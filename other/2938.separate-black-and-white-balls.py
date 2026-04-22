@@ -37,9 +37,9 @@ class Solution:
                 white.append(i)
 
         # so we want black to be from indices:
-        black_first_i, black_last_i = n - n_black, n - 1
+        black_first_i = n - n_black
         # want white to be from indices:
-        white_first_i, white_last_i = 0, n_white + 1
+        white_first_i = 0
 
         total_diff = 0
 

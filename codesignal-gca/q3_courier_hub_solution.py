@@ -90,7 +90,103 @@ deletion for dispatch order.
 """
 
 from typing import Any, List
-
+import heapq
+from collections import defaultdict
 
 def solution(operations: List[List[Any]]) -> List[int]:
-    raise NotImplementedError("Implement this Q3 practice problem.")
+  hub_to_heap = defaultdict(list) # hub -> min heap of [prio, packageId]
+  hub_to_freq_dict = defaultdict(dict) # hub -> packageId: [prio, units]
+  res = []
+
+  for operation in operations:
+    op = operation[0]
+
+    if op == "ingest":
+      hub, package_id, prio, units = operation[1], operation[2], operation[3], operation[4]
+      heap = hub_to_heap[hub]
+      freq_dict = hub_to_freq_dict[hub]
+
+      # if a different prio exist, no op
+      if package_id in freq_dict and freq_dict[package_id][0] != prio:
+        continue
+
+      heapq.heappush(heap, [prio, package_id])
+      if package_id not in freq_dict:
+        freq_dict[package_id] = [prio, units]
+      else:
+        freq_dict[package_id][1] += units
+
+    
+    elif op == "reschedule":
+      hub, package_id, new_prio = operation[1], operation[2], operation[3]
+      freq_dict = hub_to_freq_dict[hub]
+      heap = hub_to_heap[hub]
+
+      if package_id not in freq_dict:
+        continue
+      
+      if freq_dict[package_id][0] == new_prio:
+        continue
+      
+      units = freq_dict[package_id][1]
+      freq_dict[package_id] = [new_prio, units]
+      heapq.heappush(heap, [new_prio, package_id])
+      
+
+    elif op == "cancel":
+      hub, package_id, units = operation[1], operation[2], operation[3]
+      freq_dict = hub_to_freq_dict[hub]
+
+      if package_id not in freq_dict:
+        continue
+
+      elif freq_dict[package_id][1] < units:
+        continue
+      
+      elif freq_dict[package_id][1] == units:
+        del freq_dict[package_id]
+      
+      else:
+        freq_dict[package_id][1] -= units
+
+      
+    elif op == "dispatch":
+      hub, to_dispatch = operation[1], operation[2]
+      freq_dict = hub_to_freq_dict[hub] # packageId: (prio, units)
+      heap = hub_to_heap[hub] # min heap of (prio, packageId)
+
+      total_units = 0
+      for package_id in freq_dict:
+        total_units += freq_dict[package_id][1]
+      if total_units < to_dispatch:
+        res.append(-1)
+        continue
+        
+      taken_so_far = 0
+      total_cost = 0
+
+      while taken_so_far < to_dispatch:
+        # check that this isn't a stale heap entry
+        while True:
+          prio, package_id = heapq.heappop(heap)
+          if package_id not in freq_dict:
+            continue
+          accurate_prio, accurate_units = freq_dict[package_id]
+          if accurate_prio == prio:
+            break
+
+        available_units = freq_dict[package_id][1]
+        to_take = min(available_units, to_dispatch - taken_so_far)
+
+        if to_take == available_units:
+          del freq_dict[package_id]
+        else:
+          heapq.heappush(heap, [prio, package_id])          
+          freq_dict[package_id][1] -= to_take
+        
+        taken_so_far += to_take
+        total_cost += prio * to_take
+      
+      res.append(total_cost)
+
+  return res

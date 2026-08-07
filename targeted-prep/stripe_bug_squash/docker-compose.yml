@@ -1,0 +1,15 @@
+services:
+  postgres:
+    image: postgres:16
+    container_name: stripe-sql
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: stripe
+    ports:
+      - "5432:5432"
+    volumes:
+      - stripe_pgdata:/var/lib/postgresql/data
+
+volumes:
+  stripe_pgdata:
